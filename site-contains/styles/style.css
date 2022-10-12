@@ -1,3 +1,4 @@
+/*** UNIVERSAL ***/
 * {
     box-sizing: border-box;
     letter-spacing: -.001pc;
@@ -8,6 +9,52 @@ body {
     margin: 0 auto;
     display: block;
     max-width: 90%;
-    display: flex;
     padding: 4rem 0;
+}
+
+
+
+h1 { font-size: 42px; }
+h2 { font-size: 28px; text-decoration: underline; }
+p { font-size: 14px }
+
+
+/*** SPECIFIC ***/
+#rpc-form-outer-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    width: 250px;
+}
+
+#rpc-form-container {
+    background-color: #3e5062;
+    padding: 20px;
+    box-shadow: 0 0 5px black;
+    display: inline-block;
+    text-align: center;
+    color: rgb(255 255 255 / 90%);
+}
+
+#rpc-selection-message {
+    font-style: italic;
+    text-align: center;
+    font-size: 70%;
+    padding-top:10px
+}
+
+p#round-winner {
+    font-weight: 800;
+    padding: 15px;
+    display: inline-block;
+    margin: 0;
+}
+
+input#rpc-submit {
+    background: #256D1B;
+    border: 0;
+    padding: 5px 20px;
+    color: rgb(255 255 255 / 90%);
+    font-weight: 900;
+    box-shadow: 0 0 1px;
 }
