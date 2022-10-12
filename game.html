@@ -12,25 +12,32 @@
     <p>Welcome to the game.</p>
     <p>Here, you will play against me in the age-old game of kamen, papir, makaze <em>(aka: rock, paper, sciscors)</em>.</p>
     <p><b>Who am I?</b></p>
-    <p>I am what's known as the people's champ. I have played thousands of games... and yet, I am undefeated.</p>
-    <p><b>The rules?</b></p>
+    <p>I am what's known as the people's champ. I have played thousands of games... yet, I am undefeated.</p>
+    <p><b>What are the rules?</b></p>
     <p>They're simple. The first one to win 3 rounds wins the game.</p>
     <p><b>Give me your best shot:</b></p>
-    <div class="form-container">
-        <form id="rpc">
-            <input type="radio" id="rock" name="rpc" value="rock" required>
-            <label for="rock">Rock</label>
-            <input type="radio" id="paper" name="rpc" value="paper" required>
-            <label for="rock">Paper</label>
-            <input type="radio" id="sciscors" name="rpc" value="sciscors" required>
-            <label for="rock">Sciscors</label><br>
-            <br>
-            <input type="button" id="rpc-submit" value="Submit" />
-        </form>
+    <div id="rpc-form-outer-container">
+        <div id="rpc-form-container">
+            <form id="rpc">
+                <input type="radio" id="rock" name="rpc" value="rock" required>
+                <label for="rock">Rock</label>
+                <input type="radio" id="paper" name="rpc" value="paper">
+                <label for="rock">Paper</label>
+                <input type="radio" id="scissors" name="rpc" value="scissors">
+                <label for="rock">Scissors</label><br>
+                <br>
+                <input type="button" id="rpc-submit" value="Submit" />
+            </form>
+        </div>
+        <div id="rpc-selection-message">*Pick rock, paper, or scissors above to get started</div>
     </div>
+    <h2>Round Results</h2>
     <p id="user-response-output"></p>
     <p id="computer-response-output"></p>
     <p id="round-winner"></p>
+    <h2>Total Wins</h2>
+    <p id="user-wins">Your wins: 0</p>
+    <p id="computer-wins">My wins: 0</p>
     <p id="game-winner"></p>
 </body>
 <script src="site-contains/js/game-functions.js"></script>
