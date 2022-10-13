@@ -102,12 +102,12 @@ function getRandomInt(max) {
 
 // Function to generate error message if user response is blank
 function requestResponse() {
-    document.getElementById("rpc-selection-message").innerHTML = "*Please select an option.";
+    document.getElementById("rpc-selection-message").innerText = "*Please select an option.";
 }
 
 // Function to clear message after successful response
 function clearResponsePrompt() {
-    document.getElementById("rpc-selection-message").innerHTML = "";
+    document.getElementById("rpc-selection-message").innerText = "";
 }
 
 // Function to determine winner
@@ -123,15 +123,15 @@ function determineWinner(userResponse,computerResponse) {
 function declareWinner(winner) {
     let declareWinnerElement = document.getElementById("round-winner");
     if(winner === "tie") {
-        declareWinnerElement.innerHTML = `It's a draw! Play again!`;
+        declareWinnerElement.innerText = `It's a draw! Play again!`;
         declareWinnerElement.style.backgroundColor = "#84C7D0"; 
     }
     else if(winner === "user") {
-        declareWinnerElement.innerHTML = `You win! Darn!`;
+        declareWinnerElement.innerText = `You win! Darn!`;
         declareWinnerElement.style.backgroundColor = "#00ce00";
     }
     else if(winner === "computer") {
-        declareWinnerElement.innerHTML = `I win! You stink!`;
+        declareWinnerElement.innerText = `I win! You stink!`;
         declareWinnerElement.style.backgroundColor = "#e26e6e";
     }
 }
@@ -161,7 +161,7 @@ function updateTotalWins(winner) {
 // Function to update wins on frontend
 function updateFrontEndWins(winner,totalWins) {
     let el = document.getElementById(`${winner}-wins`);
-    el.innerHTML = el.innerHTML.replace(/\d/g,totalWins);
+    el.innerText = el.innerText.replace(/\d/g,totalWins);
 }
 
 // Function to check for gameOver
@@ -181,15 +181,15 @@ function endGame(gameWinner) {
 // Function to reset the game to the starting point
 function resetGame() {
     // Reset the original rpc-selection-message
-    document.getElementById("rpc-selection-message").innerHTML = "*Pick rock, paper, or scissors above to get started";
+    document.getElementById("rpc-selection-message").innerText = "*Pick rock, paper, or scissors above to get started";
 
     // Update both front end wins
     updateFrontEndWins("user",0);
     updateFrontEndWins("computer",0);
 
     // Clear the Round Results Section
-    document.getElementById("user-response-output").innerHTML = '';
-    document.getElementById("computer-response-output").innerHTML = '';
-    document.getElementById("round-winner").innerHTML = '';
+    document.getElementById("user-response-output").innerText = '';
+    document.getElementById("computer-response-output").innerText = '';
+    document.getElementById("round-winner").innerText = '';
     document.getElementById("round-winner").style.backgroundColor = '';
 }
