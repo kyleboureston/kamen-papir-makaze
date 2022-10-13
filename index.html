@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="site-contains/styles/style.css">
-    <title>Document</title>
+    <script src="site-contains/js/game-functions.js" defer></script> <!-- note: without 'defer' here, this will load before the DOM is loaded (so it won't work correctly) -->
+    <title>Kamen, Papir, Makaze</title>
 </head>
 <body>
     <h1>Kamen, Papir, Makaze</h1>
@@ -40,5 +41,4 @@
     <p id="computer-wins">My wins: 0</p>
     <p id="game-winner"></p>
 </body>
-<script src="site-contains/js/game-functions.js"></script>
 </html>
